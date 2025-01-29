@@ -17,7 +17,12 @@ html {
 p {
   color: rgb(85, 85, 85);
 }
-
+/*JUMBOTRON*/
+.jumbotron{
+  width: 100%;
+  height: 1vh;
+  background-color: #232D4F;
+}
 
 /*TRANSITION*/
 a,
@@ -171,7 +176,8 @@ section {
 /*PROFILE SECTION*/
 #profile {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
   gap: 5rem;
   height: 75vh;
 }
@@ -191,6 +197,8 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  border-radius: 50%; 
+  padding: 5em 5.8em;
 }
 .section__text p {
   font-family: 600;
@@ -213,6 +221,10 @@ section {
   margin-top: 1rem;
   gap: 1rem;
 }
+/* .text-container{
+  text-align: justify;
+  width: 70%;
+} */
 /* ICONS */
 .icon {
   cursor: pointer;
@@ -314,7 +326,9 @@ section {
   width: 400px;
   margin: auto 0;
 }
-
+.text-container{
+  text-align: justify;
+}
 /* EXPERIENCE SECTION */
 #experience {
   position: relative;
@@ -353,6 +367,7 @@ article .icon {
 .subtitle__3{
   color: #232D4F;
 }
+
 /* PROJECTS SECTION */
 #projects {
   position: relative;
@@ -455,3 +470,19 @@ div h3 a:hover {
   text-decoration: none;
   background-color: azure;
 }
+
+/*AS TAILWIND*/
+.underline{
+  text-decoration: underline #d49d43;
+}
+
+.underline:hover{
+  color: #d49d43;
+  text-decoration: none;
+}
+
+.important{
+  font-size: x-large;
+  font-weight: 700;
+}
+

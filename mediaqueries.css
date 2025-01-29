@@ -113,4 +113,7 @@
     .text-container{
         text-align: justify;
     }
+    .about-me-container{
+        flex-direction: column;
+    }
 }
