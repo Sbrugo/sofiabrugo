@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <div class="jumbotron">
-
-    </div>
+    <div class="jumbotron"></div>
     <nav id="desktop-nav">
       <div class="logo">Sofia Brugo</div>
       <div class="links-container">
@@ -24,14 +22,7 @@
         </div>
       </div>
     </nav>
-    <!-- <div class="social-links-container">
-      <ul class="social-links">
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Telegram</a></li>
-        <li><a href="#">Email</a></li>
-        <li><a href="#">Whatsapp</a></li>
-      </ul>
-    </div> -->
+
     <nav id="hamburger-nav">
       <div class="logo">Sofía Brugo</div>
       <div class="hamburger-menu">
@@ -51,30 +42,15 @@
       </div>
     </nav>
     <section id="profile">
-      <!-- <div class="section__pic-container">
-        <img
-          src="./assets/pp.jpeg"
-          alt="Sofia Brugo profile pic"
-          class="profile-pic"
-        />
-      </div> -->
-
       <div class="section__text">
-        <p class="section__text__p1">Portfolio</p>
-        <h1 class="title">Sofía Brugo</h1>
-        <p class="section__text__p2">Full-Stack Programmer</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onClick="window.open('./assets/Sofia-Brugo-Programmer-CV.pdf')"
-          >
-            Download my CV
-          </button>
-          <button class="btn btn-color-1" onClick="location.href='./#contact'">
-            Contact Me
-          </button>
-        </div>
+        <h1 class="title">Full-Stack Programmer</h1>
+        <p class="section__text__p1">
+          Frontend Mid Level <br />
+          Backend Junior
+        </p>
         <div id="socials-container">
+          <img src="./assets/telegram.png" alt="My Telegram" class="icon" />
+          <img src="./assets/gmail.png" alt="Gmail" class="icon" />
           <img
             src="./assets/linkedin.png"
             alt="My LinkedIn Profile"
@@ -87,16 +63,167 @@
             class="icon"
             onClick="location.href='https://github.com/Sbrugo'"
           />
+          <img src="./assets/file.png" alt="CV on PDF" class="icon"
+          onClick="window.open('./assets/Sofia-Brugo-Programmer-CV.pdf')"
         </div>
       </div>
     </section>
-    <section id="about">
-      <p class="section__text__p1 underline">Learn more</p>
-      <h1 class="title">About me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="./assets/seg.jpg" alt="Profile Picture" class="about-pic" />
+    <section id="summary">
+      <div class="summary-section">
+        <h2 class="title">Profile Summary</h2>
+        <div class="summary__text">
+          <p>Driven by goals</p>
+          <p>Always grateful for learning from other experience developers</p>
+          <p>I have a comprehensive understanding of software development</p>
+          <p>I learn quickly</p>
+          <p>I code within industry best practices</p>
         </div>
+      </div>
+      <hr />
+      <div class="summary-section">
+        <h2 class="title">Skills Summary</h2>
+        <div class="article-container">
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3><a>HTML & CSS</a></h3>
+              <p>3 years experience on markup language</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3><a>Figma</a></h3>
+              <p>3 years experience</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3><a>React</a></h3>
+              <p>1 year experience on React Frontend framework</p>
+            </div>
+          </article>
+          <br />
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3><a>Java</a></h3>
+              <p>0.3 years experience on Java backend language</p>
+            </div>
+          </article>
+          <article>
+            <img
+              src="./assets/checkmark.png"
+              alt="Experience icon"
+              class="icon"
+            />
+            <div>
+              <h3><a>SQL</a></h3>
+              <p>0.3 years experience with Database</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">Learn more about my</p>
+      <h1 class="title">Education</h1>
+      <h2>Careers</h2>
+      <div class="section-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Career</th>
+              <th>Insitution</th>
+              <th>Status</th>
+              <th>Approved Subjects</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Social Communication</td>
+              <td>UCES</td>
+              <td>Stopped</td>
+              <td>7</td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td>Fashion Aesthetics Design and Management</td>
+              <td>UADE</td>
+              <td>Stopped</td>
+              <td>13</td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Certified Tech Developer</td>
+              <td>Digital House</td>
+              <td>Finished</td>
+              <td>17</td>
+              <td>2023</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Certifications</h2>
+      <div class="section-container">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Insitution</th>
+              <th>Certificate</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MERN Full Stack: MongoDB, Express, React y Node</td>
+              <td>UDEMY</td>
+              <td>No</td>
+              <td>2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Projects</h2>
+      <div class="section-container">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Technologies</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Login System</td>
+              <td>React, Typescript</td>
+              <td>2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- <div class="section-container">
         <div class="about-details-container">
           <div class="about-containers about-me-container">
             <div class="details-container">
@@ -107,9 +234,16 @@
               />
               <h3>Experience</h3>
               <p class="experience-details">
-                Grateful for working with people and <span class="underline">building expertise</span> through experienced developers. <br/> I am driven by goals and enjoy the art of achieving them. I have <span class="underline">a comprehensive understanding</span> of software development in both frontend and backend technologies, I learn quickly and code within industry best practices.</p>
+                Grateful for working with people and
+                <span class="underline">building expertise</span> through
+                experienced developers. <br />
+                I am driven by goals and enjoy the art of achieving them. I have
+                <span class="underline">a comprehensive understanding</span> of
+                software development in both frontend and backend technologies,
+                I learn quickly and code within industry best practices.
+              </p>
             </div>
-            <div class="details-container">
+            <div class="details-container education">
               <img
                 src="./assets/education.png"
                 alt="education icon"
@@ -120,31 +254,40 @@
                 Certified Tech Developer <br />
                 Digital House
               </p>
+              <div class="hidden">
+                <h3>Professional Profile</h3>
+                <p>
+                  Frontend Mid-Level <br />
+                  Full Stack Junior <br />MERN Stack
+                </p>
+              </div>
             </div>
           </div>
-          <div class="text-container">
-            <p>
-              <!-- Empecé programación por que me pareció súper divertido, pero
-              después me di cuenta que podía ayudar un montón a la gente usando
-              de sus herramientas. <br />
-              Me gusta entrar en contacto con las varias necesidadess que puede
-              haber para dar vida a cualquier idea, disfruto de involucrarme en
-              su resolución. <br />
-              Entiendo programación y lo vivo como un medio de comunicación más;
-              aunque sea desde el ser humano hacia la computadora. <br />
-              Tengo la suerte de haber conocido a profesionales que me dieron la
-              oportunidad. -->
-              <!-- Frontend Development started (for me) in fashion school when understanding the sensibility visual production requires and the art of lateral thinking. -->
-              Working with frontend development for me started when I studied fashion for several years adquiring a good sense of passion for visual art, a sensibility for visual production and lateral thinking. On programming I started my 
-              jouney in frontend with learning markup language in which I have worked in several jobs.
-              The introduction to Javascript happened on Digital House Certified Tech Development Course 
-              where I developed a curiosity for the expansive possibilities of the art of programming. I learned about backend with Java, database production and frontend intricacy. 
-              I worked with frontend frameworks such as React and Angular, mostly with React. 
-              I learned that working alone is good as it motivates learning. Also working in teams as it makes someone part of bigger projects.
-            </p>
+          <div class="details-container user">
+            <div>
+              <img src="./assets/user.png" alt="user icon" class="icon" />
+              <h3>About me</h3>
+            </div>
+            <div class="text-container">
+              <p>
+                I started learning on fashion school about visual productions
+                and lateral thinking. <br />
+                My journey began as many other's with markup language (which I
+                have worked with in several jobs). Then I bacame curious about
+                programming with Javascript and meanwhile learned about backend
+                with Java, database production and various frontend
+                complexities.
+                <br />
+                I have worked since with frontend frameworks - React and
+                Angular, mostly with React. I have learned the value of working
+                independently, as it drives continuous learning, and
+                collaborating in teams, as it allows me to contribute to larger
+                projects.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -152,10 +295,7 @@
         onClick="location.href='./#experience'"
       />
     </section>
-    <!-- <section id="programmer-profile">
-      <h1 class="title">Professional Profile</h1>
-      <p><span class="important">Bilingual</span> lateral thinker. <span class="important">Creative</span> problem solver, <span class="underline">logic enthusiast.</span></p>
-    </section> -->
+
     <section id="experience">
       <p class="section__text__p1 subtitle__2">Explore my</p>
       <h1 class="title">Skills</h1>
@@ -182,7 +322,7 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Bootstrap </h3>
+                  <h3>Bootstrap</h3>
                   <p>Basic</p>
                 </div>
               </article>
@@ -219,7 +359,6 @@
                   <p>Basic</p>
                 </div>
               </article>
-              
             </div>
           </div>
           <div class="details-container">
@@ -301,16 +440,23 @@
               <article>
                 <div class="project-pic-container">
                   <img
-                      src="./assets/Visual-Studio.jpg"
-                      alt="Project 2"
-                      class="project-img"
-                    />
+                    src="./assets/Visual-Studio.jpg"
+                    alt="Project 2"
+                    class="project-img"
+                  />
                 </div>
               </article>
-                <h3>Fullstack Developer</h3>
-                <p>Digital House</p><br/> 
-                <p>Group project for ecommerce</p> <br/>
-                <p>Description: As the final group project from the Certified Tech Developer course on Digital House we did a functional web page.<br/> Stack: Docker, Tailwind, React, Java</p>
+              <h3>Fullstack Developer</h3>
+              <p>Digital House</p>
+              <br />
+              <p>Group project for ecommerce</p>
+              <br />
+              <p>
+                Description: As the final group project from the Certified Tech
+                Developer course on Digital House we did a functional web
+                page.<br />
+                Stack: Docker, Tailwind, React, Java
+              </p>
             </div>
           </a>
           <a href="https://leela.tech/work-with-us/">
@@ -318,16 +464,23 @@
               <article>
                 <div class="project-pic-container">
                   <img
-                      src="./assets/leelaTech.jpeg"
-                      alt="Project 2"
-                      class="project-img"
-                    />
+                    src="./assets/leelaTech.jpeg"
+                    alt="Project 2"
+                    class="project-img"
+                  />
                 </div>
               </article>
               <h3>Frontend Developer</h3>
-              <p>Leela Tech<br/></p>
-              <p>Freelance Frontend Development</p> <br/>
-              <p>Description: I worked as a Freelancer briefly on Leela Tech´s web Landing page to collaborate with the proyect development, ammending errors and finishing the last requirements of data management. <br/> Stack: Javscript, Next.JS, Hubspot</p> 
+              <p>Leela Tech<br /></p>
+              <p>Freelance Frontend Development</p>
+              <br />
+              <p>
+                Description: I worked as a Freelancer briefly on Leela Tech´s
+                web Landing page to collaborate with the proyect development,
+                ammending errors and finishing the last requirements of data
+                management. <br />
+                Stack: Javscript, Next.JS, Hubspot
+              </p>
             </div>
           </a>
           <div>
@@ -335,24 +488,27 @@
               <article>
                 <div class="project-pic-container">
                   <img
-                      src="./assets/argentina-gob.png"
-                      alt="Project 2"
-                      class="project-img"
-                    />
+                    src="./assets/argentina-gob.png"
+                    alt="Project 2"
+                    class="project-img"
+                  />
                 </div>
               </article>
               <h3>Frontend Developer</h3>
-              <p>City Government <br/></p>
-              <p>HTML & CSS implementation - mockup</p> <br/>
-              <p>Description: I translated design proposals to web page sites and worked from the beginning to the final stages of each project. <br/> Stack: HTML, CSS, Python y PHP</p>
+              <p>City Government <br /></p>
+              <p>HTML & CSS implementation - mockup</p>
+              <br />
+              <p>
+                Description: I translated design proposals to web page sites and
+                worked from the beginning to the final stages of each project.
+                <br />
+                Stack: HTML, CSS, Python y PHP
+              </p>
             </div>
           </div>
-
-          
-
         </div>
       </div>
-      
+
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -360,76 +516,7 @@
         onClick="location.href='./#projects'"
       />
     </section>
-    <!-- <section id="projects">
-      <p class="section__text__p1 subtitle__3">Check out my</p>
-      <h1 class="title">Recent Projects</h1>
-      <p class="section__text__p1 subtitle__3">MERN Stack</p>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <a href="http://visualstudioservice.pro/">
-            <div class="project details-container">
-              <article>
-                <div class="project-pic-container">
-                  <img
-                      src="./assets/Visual-Studio.jpg"
-                      alt="Project 2"
-                      class="project-img"
-                    />
-                </div>
-              </article>
-                <h3>React</h3>
-                <a href="#">Live Chat</a><br/> 
-                <a href="https://react-shopping-list-eight.vercel.app/">Shopping List</a> <br/>
-                <a href="#">Ecommerce</a> 
-            </div>
-          </a>
-          <a href="https://leela.tech/work-with-us/">
-            <div class="project details-container">
-              <article>
-                <div class="project-pic-container">
-                  <img
-                      src="./assets/leelaTech.jpeg"
-                      alt="Project 2"
-                      class="project-img"
-                    />
-                </div>
-              </article>
-              <h3>Mongo DB</h3>
-              <a href="#">Ejercicio 1</a><br/>
-              <a href="#">Ejercicio 2</a> <br/>
-              <a href="#">Ejercicio 3</a> 
-            </div>
-          </a>
-          <div>
-            <div class="project details-container">
-              <article>
-                <div class="project-pic-container">
-                  <img
-                      src="./assets/argentina-gob.png"
-                      alt="Project 2"
-                      class="project-img"
-                    />
-                </div>
-              </article>
-              <h3>Node JS</h3>
-              <a href="#">Ejercicio 1</a><br/>
-              <a href="#">Ejercicio 2</a> <br/>
-              <a href="#">Ejercicio 3</a>
-            </div>
-          </div>
 
-          
-
-        </div>
-      </div>
-      
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onClick="location.href='./#projects'"
-      />
-    </section> -->
     <section id="contact">
       <p class="section__text__p1">Contact me</p>
       <h1 class="title">Contact</h1>
@@ -465,9 +552,7 @@
       </nav>
       <p>Copyright &#169; 2024 Sofia Brugo. All Rights Reserved.</p>
     </footer>
-    <div class="jumbotron">
-      
-    </div>
+    <div class="jumbotron"></div>
     <script src="script.js"></script>
   </body>
 </html>
