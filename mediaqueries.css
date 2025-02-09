@@ -123,6 +123,7 @@
     height: 1.5rem;
     padding: 0.5em;
   }
+
   /*TABLE*/
   table {
     overflow-x: auto;
@@ -138,5 +139,6 @@
   }
   .article-container {
     gap: 1rem;
+    flex-direction: column;
   }
 }
