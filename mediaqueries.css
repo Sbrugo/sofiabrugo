@@ -139,5 +139,6 @@
   }
   .article-container {
     gap: 1rem;
+    flex-direction: column;
   }
 }
