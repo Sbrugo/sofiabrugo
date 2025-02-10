@@ -93,7 +93,7 @@
         <div class="presentation-container">
           <div class="summary-section">
             <div class="article-container">
-              <div style="display: flex; gap: 1rem">
+              <div style="display: flex; gap: 1.5rem">
                 <article>
                   <img
                     src="./assets/checkmark.png"
@@ -103,6 +103,8 @@
                   <div>
                     <a>React</a>
                     <p>1 year experience on React Frontend framework</p>
+                    <a style="font-size: 0.8rem;"
+                    onclick="showArticle('react')">Show more</a>
                   </div>
                 </article>
                 <article>
@@ -112,12 +114,9 @@
                     class="icon-2 hover-effect-2"
                   />
                   <div>
-                    <a
-                      onMouseOver="showArticle('htmlcss')"
-                      onclick="showArticle('htmlcss')"
-                      >HTML & CSS</a
-                    >
+                    <a>HTML & CSS</a>
                     <p>3 years experience on markup language</p>
+                    <a style="font-size: 0.8rem;" onclick="showArticle('htmlcss')">Show more</a>
                   </div>
                 </article>
                 <article>
@@ -129,6 +128,7 @@
                   <div>
                     <a>Figma</a>
                     <p>3 years experience</p>
+                    <a style="font-size: 0.8rem;">Show more</a>
                   </div>
                 </article>
               </div>
@@ -143,6 +143,7 @@
                   <div>
                     <a>Java</a>
                     <p>0.3 years experience on Java backend language</p>
+                    <a style="font-size: 0.8rem;">Show more</a>
                   </div>
                 </article>
                 <article>
@@ -154,9 +155,71 @@
                   <div>
                     <a>SQL</a>
                     <p>0.3 years experience with Database</p>
+                    <a style="font-size: 0.8rem;">Show more</a>
                   </div>
                 </article>
               </div>
+            </div>
+          </div>
+         
+          <div class="hidden" id="htmlcss">
+            <h4 class="description-subject">HTML & CSS</h4>
+            <div class="description-container">
+              <div class="subjects">
+                <div class="subject__group"> 
+                  <a>Responsive web pages</a><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>Structured content</a><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>DOM Manipulation</a><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>Styled CSS</a><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>Semantic HTML</a><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>CSS Frameworks</a><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+              </div>
+              <a>Examples:</a>
+              <a
+                href="https://sbrugo.github.io/HTMLCSS/Responsive-web-page/index.html"
+                >Landing Page</a
+              >
+            </div>
+          </div>
+          <div class="hidden" id="react">
+            <h4 class="description-subject">React</h4>
+            <div class="description-container">
+              <div class="subjects">
+                <div class="subject__group"> 
+                  <p>Redux</p><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <p>Performance Optimization</p><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <p>React Router</p><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <p>CSS-in-JS</p><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <p>API Integration</p><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <p>Version Control with Git</p><div class="level-bar"><div class="level-bar-inner"></div></div>
+                </div>
+              </div>
+              <a>Examples:</a>
+              <a
+                href="https://sbrugo.github.io/HTMLCSS/Responsive-web-page/index.html"
+                >Landing Page</a
+              >
             </div>
           </div>
         </div>
@@ -353,6 +416,8 @@
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
         <div class="about-containers">
+          <div class="spacer"></div>
+          
           <a href="http://visualstudioservice.pro/">
             <div class="project details-container">
               <article>
@@ -367,13 +432,31 @@
               <h3>Fullstack Developer</h3>
               <p>Digital House</p>
               <br />
-              <p>Group project for ecommerce</p>
+              <p>Functional e-commerce</p>
               <br />
               <p>
-                Description: As the final group project from the Certified Tech
-                Developer course on Digital House we did a functional web
-                page.<br />
+                
                 Stack: Docker, Tailwind, React, Java
+              </p>
+            </div>
+          </a>
+          <a href="https://leela.tech/work-with-us/">
+            <div class="project details-container">
+              <article>
+                <div class="project-pic-container">
+                  <img
+                    src="./assets/kopius.png"
+                    alt="Project 2"
+                    class="project-img"
+                  />
+                </div>
+              </article>
+              <h3>Frontend Developer</h3>
+              <p>Kopius for First Close<br /></p>
+              <br />
+              <p>
+                Software development to handle credit requests.  I have a Frontend position and focus my work on React. <br/>
+              Stack: Scrum, Kanban, Git, React, Redux, Typescript, Styled-Components.
               </p>
             </div>
           </a>
@@ -390,11 +473,9 @@
               </article>
               <h3>Frontend Developer</h3>
               <p>Leela Tech<br /></p>
-              <p>Freelance Frontend Development</p>
               <br />
               <p>
-                Description: I worked as a Freelancer briefly on Leela Tech´s
-                web Landing page to collaborate with the proyect development,
+                Web Landing page project development
                 ammending errors and finishing the last requirements of data
                 management. <br />
                 Stack: Javscript, Next.JS, Hubspot
@@ -414,16 +495,16 @@
               </article>
               <h3>Frontend Developer</h3>
               <p>City Government <br /></p>
-              <p>HTML & CSS implementation - mockup</p>
               <br />
               <p>
-                Description: I translated design proposals to web page sites and
-                worked from the beginning to the final stages of each project.
+                HTML & CSS for mockups. Design proposals translated to web page layouts. I
+                worked from the beginning to the final stages of each project using markup languages and frontend frameworks.
                 <br />
-                Stack: HTML, CSS, Python y PHP
+                Stack: HTML, CSS, Angular, Docker.
               </p>
             </div>
           </a>
+
         </div>
       </div>
 
@@ -461,10 +542,10 @@
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
-            <li><a href="#about">Sobre Mi</a></li>
+            <li><a href="#about">About Me</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>

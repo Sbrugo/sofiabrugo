@@ -37,10 +37,11 @@ a,
 /*HIDDEN*/
 
 .hidden {
-  opacity: 0;
+  display: none;
 }
 .show {
-  opacity: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /*EFFECT*/
@@ -299,8 +300,7 @@ section {
 }
 article {
   display: flex;
-  width: 80%;
-  gap: 0.5rem;
+  align-items: center;
 }
 article .icon {
   cursor: default;
@@ -340,6 +340,36 @@ tbody tr:hover {
 tbody tr td:hover {
   color: #1f1d1b;
 }
+#html, #react {
+  margin: 3rem 0;
+}
+.description-subject {
+  display: block;
+  margin: 1rem 0;
+}
+.subjects{
+  padding: 0 2em 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.subject__group{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*LEVEL BAR*/
+.level-bar{
+  height: 15px;
+    background: #e8e8e8;
+    width: 22rem;
+}
+.level-bar-inner{
+  height: 15px;
+  background: #232d4f;
+  width: 90%;
+}
 
 /* ICONS */
 
@@ -358,7 +388,9 @@ tbody tr td:hover {
   padding: 0.5em;
   border-radius: 50%;
   margin-right: 20px;
+  background-color: #84827e;
 }
+
 /* ABOUT SECTION */
 
 #about {
@@ -369,7 +401,6 @@ tbody tr td:hover {
   margin-bottom: 2rem;
   margin-top: 2rem;
   justify-content: center;
-  /* overflow: scroll; */
 }
 .about-containers a {
   display: flex;
@@ -450,12 +481,18 @@ tbody tr td:hover {
   flex-wrap: nowrap;
   overflow-x: scroll;
 }
+.spacer {
+  flex: 0 0 290px; 
+}
 .project {
   width: 270px;
   height: 373px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+.project:hover{
+  border: #f277b0 1px solid;
 }
 .project-pic-container {
   width: 80px;
