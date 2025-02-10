@@ -30,7 +30,7 @@ function showArticle(subject) {
             </p>
             <h4>Examples:</h4>
             <a
-              href="https://sbrugo.github.io/static-web-sites/Responsive-web-page/index.html"
+              href="https://sbrugo.github.io/HTMLCSS/Responsive-web-page/index.html"
               >Landing Page</a
             >
             <p>
