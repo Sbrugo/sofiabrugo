@@ -141,4 +141,7 @@
     gap: 1rem;
     flex-direction: column;
   }
+  .table__hidden-element{
+    display: none;
+  }
 }
