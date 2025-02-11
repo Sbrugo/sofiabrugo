@@ -25,9 +25,6 @@ function showArticle(subject) {
               <li>DOM Manipulation</li>
               <li>Styled CSS</li>
             </ul>
-            <p>
-              By far what I have more experience on in frontend web development.
-            </p>
             <h4>Examples:</h4>
             <a
               href="https://sbrugo.github.io/static-web-sites/Responsive-web-page/index.html"
