@@ -381,9 +381,9 @@ tbody tr td:hover {
 
 .icon {
   cursor: pointer;
-  height: 1.5rem;
+  height: 2rem;
   background-color: #f0f0f0;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 50%;
 }
 .icon:hover {
@@ -439,7 +439,10 @@ tbody tr td:hover {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   min-height: fit-content;
+  margin-top: 2rem;
+  border-color: #d3d0cb;
 }
+
 .text-container {
   text-align: justify;
 }
