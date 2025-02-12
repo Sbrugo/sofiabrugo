@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio SB</title>
+    <title>Sofia Brugo</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <div class="jumbotron"></div>
@@ -103,7 +104,7 @@
                   <div>
                     <a>React</a>
                     <p>1 year experience on React Frontend framework</p>
-                    <a style="font-size: 0.8rem;"
+                    <a style="font-size: 0.8rem; font-weight: 700;"
                     onclick="showArticle('react')">Show more</a>
                   </div>
                 </article>
@@ -116,7 +117,7 @@
                   <div>
                     <a>HTML & CSS</a>
                     <p>3 years experience on markup language</p>
-                    <a style="font-size: 0.8rem;" onclick="showArticle('htmlcss')">Show more</a>
+                    <a style="font-size: 0.8rem; font-weight: 700;" onclick="showArticle('htmlcss')">Show more</a>
                   </div>
                 </article>
                 <article>
@@ -128,7 +129,6 @@
                   <div>
                     <a>Figma</a>
                     <p>3 years experience</p>
-                    <a style="font-size: 0.8rem;">Show more</a>
                   </div>
                 </article>
               </div>
@@ -143,7 +143,7 @@
                   <div>
                     <a>Java</a>
                     <p>0.3 years experience on Java backend language</p>
-                    <a style="font-size: 0.8rem;">Show more</a>
+                    <a style="font-size: 0.8rem; font-weight: 700;" onclick="showArticle('java')">Show more</a>
                   </div>
                 </article>
                 <article>
@@ -155,7 +155,6 @@
                   <div>
                     <a>SQL</a>
                     <p>0.3 years experience with Database</p>
-                    <a style="font-size: 0.8rem;">Show more</a>
                   </div>
                 </article>
               </div>
@@ -164,6 +163,8 @@
          
           <div class="hidden" id="htmlcss">
             <h4 class="description-subject">HTML & CSS</h4>
+            <a style="align-self: flex-end; font-size: 0.8rem;" onclick="closeSection('htmlcss')">Close <i class="fa-regular fa-circle-xmark"></i></a>
+
             <div class="description-container">
               <div class="subjects">
                 <div class="subject__group"> 
@@ -194,6 +195,7 @@
           </div>
           <div class="hidden" id="react">
             <h4 class="description-subject">React</h4>
+            <a style="align-self: flex-end; font-size: 0.8rem;" onclick="closeSection('react')">Close <i class="fa-regular fa-circle-xmark"></i></a>
             <div class="description-container">
               <div class="subjects">
                 <div class="subject__group"> 
@@ -220,6 +222,41 @@
                 href="https://sbrugo.github.io/HTMLCSS/Responsive-web-page/index.html"
                 >Landing Page</a
               >
+            </div>
+          </div>
+          <div class="hidden" id="java">
+            <h4 class="description-subject">Java</h4>
+            <a style="align-self: flex-end; font-size: 0.8rem;" onclick="closeSection('java')">Close <i class="fa-regular fa-circle-xmark"></i></a>
+            <div class="description-container">
+              <div class="subjects">
+                <div class="subject__group"> 
+                  <a>APIs and Web Development</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>Spring Framework</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>Maven</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>Integration with React</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>Design Patterns</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                </div>
+                <div class="subject__group"> 
+                  <a>Object-Oriented Programming</a><div class="level-bar"><div class="level-bar-inner fifty"></div></div>
+                </div>
+              </div>
+              <a>Examples:</a>
+              <a
+                href="https://github.com/Sbrugo/Java-CRUD-API">Java-CRUD-API</a>
+                <a
+                href="https://github.com/Exelh/Odonto">Java & React Webpage</a>
+                <a
+                href=" https://github.com/Andru890/Team4-PI/tree/main/backend/src/main/java/com/visualstudio/rest/api">Ecommerce API</a>
+               
+
             </div>
           </div>
         </div>
@@ -291,119 +328,6 @@
           </tbody>
         </table>
       </div>
-      <!-- <h2>Projects</h2>
-      <div class="section-container table-container">
-        <table id="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Technologies</th>
-              <th>Year</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Login System</td>
-              <td>React, Typescript, Redux</td>
-              <td>2025</td>
-              <td>Link</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-      <!-- <h2>Reads</h2> -->
-      <!-- <div class="section-container">
-        <table id="table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Author</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Principles of Computer Architecture</td>
-              <td>Murdocca, Heuring</td>
-              <td>
-                <a href="https://academicos.azc.uam.mx/oan/lac/Murdocca_en.pdf"
-                  >Link</a
-                >
-              </td>
-            </tr>
-            <tr>
-              <td>Arquitectura de von Neumann</td>
-              <td>Facultad de Ingeniería - UDELAR</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> -->
-      <!-- <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers about-me-container">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p class="experience-details">
-                Grateful for working with people and
-                <span class="underline">building expertise</span> through
-                experienced developers. <br />
-                I am driven by goals and enjoy the art of achieving them. I have
-                <span class="underline">a comprehensive understanding</span> of
-                software development in both frontend and backend technologies,
-                I learn quickly and code within industry best practices.
-              </p>
-            </div>
-            <div class="details-container education">
-              <img
-                src="./assets/education.png"
-                alt="education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>
-                Certified Tech Developer <br />
-                Digital House
-              </p>
-              <div class="hidden">
-                <h3>Professional Profile</h3>
-                <p>
-                  Frontend Mid-Level <br />
-                  Full Stack Junior <br />MERN Stack
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="details-container user">
-            <div>
-              <img src="./assets/user.png" alt="user icon" class="icon" />
-              <h3>About me</h3>
-            </div>
-            <div class="text-container">
-              <p>
-                I started learning on fashion school about visual productions
-                and lateral thinking. <br />
-                My journey began as many other's with markup language (which I
-                have worked with in several jobs). Then I bacame curious about
-                programming with Javascript and meanwhile learned about backend
-                with Java, database production and various frontend
-                complexities.
-                <br />
-                I have worked since with frontend frameworks - React and
-                Angular, mostly with React. I have learned the value of working
-                independently, as it drives continuous learning, and
-                collaborating in teams, as it allows me to contribute to larger
-                projects.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> -->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -418,7 +342,7 @@
         <div class="about-containers">
           <div class="spacer"></div>
           
-          <a href="http://visualstudioservice.pro/">
+          <a>
             <div class="project details-container">
               <article>
                 <div class="project-pic-container">

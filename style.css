@@ -47,7 +47,7 @@ a,
 /*EFFECT*/
 .hover-effect {
   padding: 0 5px;
-  background: linear-gradient(290deg, #232d4f, #f2f4f3, white);
+  background: linear-gradient(290deg, #D0D1AC, #f2f4f3, white);
   background-size: 200% 100%;
   border: none;
   border-radius: 10px;
@@ -62,7 +62,7 @@ a,
 
 .hover-effect-2 {
   padding: 0 5px;
-  background: linear-gradient(290deg, white, #f2f4f3, #232d4f);
+  background: linear-gradient(290deg, white, #f2f4f3, #D0D1AC);
   background-size: 200% 100%;
   border: none;
   border-radius: 10px;
@@ -119,6 +119,7 @@ a {
 
 a:hover {
   cursor: pointer;
+  color: #f277b0;
 }
 
 .social-links a {
@@ -338,9 +339,9 @@ tbody tr:hover {
   background-color: rgba(132, 130, 126, 0.02);
 }
 tbody tr td:hover {
-  color: #1f1d1b;
+  color: #f277b0;
 }
-#html, #react {
+#htmlcss, #react, #java {
   margin: 3rem 0;
 }
 .description-subject {
@@ -363,14 +364,19 @@ tbody tr td:hover {
 .level-bar{
   height: 15px;
     background: #e8e8e8;
-    width: 22rem;
+    width: 20rem;
 }
 .level-bar-inner{
   height: 15px;
-  background: #232d4f;
+  background: #D0D1AC;
   width: 90%;
 }
-
+.fifty{
+  width: 50%;
+}
+.eighty{
+  width: 80%
+}
 /* ICONS */
 
 .icon {
