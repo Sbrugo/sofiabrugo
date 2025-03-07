@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sofia Brugo</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="jumbotron"></div>
@@ -16,7 +22,7 @@
       <div class="links-container">
         <div>
           <ul class="nav-links">
-            <li><a href="#about">About Me</a></li>
+            <li><a href="#summary">About Me</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -35,7 +41,7 @@
         </div>
         <div class="menu-links">
           <ul class="nav-links">
-            <li><a href="#about" onclick="toggleMenu()">About Me</a></li>
+            <li><a href="#summary" onclick="toggleMenu()">About Me</a></li>
             <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
             <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
             <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -46,6 +52,9 @@
     <section id="profile">
       <div class="section__text">
         <h1 class="title">Full-Stack Programmer</h1>
+        <div class="profile__image">
+          <img src="./assets/profile_image2.png" />
+        </div>
         <p class="section__text__p1">
           Frontend Mid Level <br />
           Backend Junior
@@ -106,8 +115,11 @@
                   <div>
                     <a>React</a>
                     <p>1 year experience on React Frontend framework</p>
-                    <a style="font-size: 0.8rem; font-weight: 700;"
-                    onclick="showArticle('react')">Show more</a>
+                    <a
+                      style="font-size: 0.8rem; font-weight: 700"
+                      onclick="showArticle('react')"
+                      >Show more</a
+                    >
                   </div>
                 </article>
                 <article>
@@ -119,7 +131,11 @@
                   <div>
                     <a>HTML & CSS</a>
                     <p>3 years experience on markup language</p>
-                    <a style="font-size: 0.8rem; font-weight: 700;" onclick="showArticle('htmlcss')">Show more</a>
+                    <a
+                      style="font-size: 0.8rem; font-weight: 700"
+                      onclick="showArticle('htmlcss')"
+                      >Show more</a
+                    >
                   </div>
                 </article>
                 <article>
@@ -145,7 +161,11 @@
                   <div>
                     <a>Java</a>
                     <p>0.3 years experience on Java backend language</p>
-                    <a style="font-size: 0.8rem; font-weight: 700;" onclick="showArticle('java')">Show more</a>
+                    <a
+                      style="font-size: 0.8rem; font-weight: 700"
+                      onclick="showArticle('java')"
+                      >Show more</a
+                    >
                   </div>
                 </article>
                 <article>
@@ -165,7 +185,11 @@
 
           <div class="hidden" id="htmlcss">
             <h4 class="description-subject">HTML & CSS</h4>
-            <a style="align-self: flex-end; font-size: 0.8rem;" onclick="closeSection('htmlcss')">Close <i class="fa-regular fa-circle-xmark"></i></a>
+            <a
+              style="align-self: flex-end; font-size: 0.8rem"
+              onclick="closeSection('htmlcss')"
+              >Close <i class="fa-regular fa-circle-xmark"></i
+            ></a>
 
             <div class="description-container">
               <div class="subjects">
@@ -215,7 +239,11 @@
           </div>
           <div class="hidden" id="react">
             <h4 class="description-subject">React</h4>
-            <a style="align-self: flex-end; font-size: 0.8rem;" onclick="closeSection('react')">Close <i class="fa-regular fa-circle-xmark"></i></a>
+            <a
+              style="align-self: flex-end; font-size: 0.8rem"
+              onclick="closeSection('react')"
+              >Close <i class="fa-regular fa-circle-xmark"></i
+            ></a>
             <div class="description-container">
               <div class="subjects">
                 <div class="subject__group">
@@ -264,37 +292,59 @@
           </div>
           <div class="hidden" id="java">
             <h4 class="description-subject">Java</h4>
-            <a style="align-self: flex-end; font-size: 0.8rem;" onclick="closeSection('java')">Close <i class="fa-regular fa-circle-xmark"></i></a>
+            <a
+              style="align-self: flex-end; font-size: 0.8rem"
+              onclick="closeSection('java')"
+              >Close <i class="fa-regular fa-circle-xmark"></i
+            ></a>
             <div class="description-container">
               <div class="subjects">
-                <div class="subject__group"> 
-                  <a>APIs and Web Development</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                <div class="subject__group">
+                  <a>APIs and Web Development</a>
+                  <div class="level-bar">
+                    <div class="level-bar-inner eighty"></div>
+                  </div>
                 </div>
-                <div class="subject__group"> 
-                  <a>Spring Framework</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                <div class="subject__group">
+                  <a>Spring Framework</a>
+                  <div class="level-bar">
+                    <div class="level-bar-inner eighty"></div>
+                  </div>
                 </div>
-                <div class="subject__group"> 
-                  <a>Maven</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                <div class="subject__group">
+                  <a>Maven</a>
+                  <div class="level-bar">
+                    <div class="level-bar-inner eighty"></div>
+                  </div>
                 </div>
-                <div class="subject__group"> 
-                  <a>Integration with React</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                <div class="subject__group">
+                  <a>Integration with React</a>
+                  <div class="level-bar">
+                    <div class="level-bar-inner eighty"></div>
+                  </div>
                 </div>
-                <div class="subject__group"> 
-                  <a>Design Patterns</a><div class="level-bar"><div class="level-bar-inner eighty"></div></div>
+                <div class="subject__group">
+                  <a>Design Patterns</a>
+                  <div class="level-bar">
+                    <div class="level-bar-inner eighty"></div>
+                  </div>
                 </div>
-                <div class="subject__group"> 
-                  <a>Object-Oriented Programming</a><div class="level-bar"><div class="level-bar-inner fifty"></div></div>
+                <div class="subject__group">
+                  <a>Object-Oriented Programming</a>
+                  <div class="level-bar">
+                    <div class="level-bar-inner fifty"></div>
+                  </div>
                 </div>
               </div>
               <a>Examples:</a>
+              <a href="https://github.com/Sbrugo/Java-CRUD-API"
+                >Java-CRUD-API</a
+              >
+              <a href="https://github.com/Exelh/Odonto">Java & React Webpage</a>
               <a
-                href="https://github.com/Sbrugo/Java-CRUD-API">Java-CRUD-API</a>
-                <a
-                href="https://github.com/Exelh/Odonto">Java & React Webpage</a>
-                <a
-                href=" https://github.com/Andru890/Team4-PI/tree/main/backend/src/main/java/com/visualstudio/rest/api">Ecommerce API</a>
-               
-
+                href=" https://github.com/Andru890/Team4-PI/tree/main/backend/src/main/java/com/visualstudio/rest/api"
+                >Ecommerce API</a
+              >
             </div>
           </div>
         </div>
@@ -379,7 +429,7 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="spacer"></div>
-          
+
           <a>
             <div class="project details-container">
               <article>
