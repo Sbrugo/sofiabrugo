@@ -400,9 +400,9 @@ tbody tr td:hover {
 
 .icon {
   cursor: pointer;
-  height: 2rem;
+  height: 2.5rem;
   background-color: #f0f0f0;
-  padding: 0.5em;
+  padding: 0.8em;
   border-radius: 50%;
 }
 .icon:hover {
