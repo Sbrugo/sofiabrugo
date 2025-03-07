@@ -239,7 +239,7 @@ section {
   justify-content: center;
   align-content: center;
   /* gap: 5rem; */
-  padding: 4rem 2rem;
+  padding: 2rem;
   margin: 0;
   width: 100%;
   text-shadow: 3px 3px 5px white;
@@ -250,7 +250,7 @@ section {
 }
 .profile__image img {
   border-radius: 50%;
-  width: 35%;
+  width: 25%;
 }
 .section__text {
   align-self: center;
