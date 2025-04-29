@@ -1,3 +1,4 @@
+// src/App.js
 import React from "react";
 import { motion } from "framer-motion";
 import "./App.css";
@@ -7,19 +8,25 @@ const technologies = [
     number: "01",
     title: "Next.js",
     highlight: "Tailwind CSS",
-    description: `A person I know needs something more professional than Google Forms, so she asked me to develop a Wix website. As I do not use Wix, (I should try sometime), we decided to develop a full-stack app with Next.js and integrate logic to create a clean, accessible, and fast design. The result was a platform where she can edit the view without writing any code and get in contact with people and companies.`,
+    description: `A person I know needs something more professional than Google Forms, so she asks me to develop a Wix website. As I do not do Wix, (I should try sometime), 
+    we decided to develop a fullstack app with Next.js and integrate logics to create a clean, accessible, and fast design. 
+    The result was a platform where she can edit the view without writing any code and get in contact with people and companies.`,
   },
   {
     number: "02",
     title: "React",
     highlight: "Git, Redux",
-    description: `I worked in a team on a credit platform. First, we built the entire interface with React, and then implemented Redux for global state management. I learned a lot about teamwork and Git, PR Requests, ESLint, Jira, Scrum, Kanban, styled-components, etc.`,
+    description: `I worked in a team on a credit platform. 
+    First, we built the entire interface with React, and then implemented Redux 
+    for global state management. I learned a lot about teamwork and Git, PR Requests, ESLint, Jira, Scrum, Kanban, styled-components, etc.`,
   },
   {
     number: "03",
     title: "Nest.js",
     highlight: "MongoDB, Validations",
-    description: `During a technical interview, I built a backend with Nest.js. I focused on properly separating the logic and keeping the code clean. I applied validations, used MongoDB, and incorporated concepts from Java with Spring Boot to structure the project.`,
+    description: `During a technical interview, I built a backend with Nest.js. 
+    I focused on properly separating the logic and keeping the code clean. 
+    I applied validations, used MongoDB, and incorporated concepts from Java with Spring Boot to structure the project.`,
   },
 ];
 
@@ -49,10 +56,9 @@ const academic_profile = [
   {
     title: "Practical application of computing",
     detail:
-      "Applied Computing often focuses on solving real-world problems using computing tools, which involves both software and hardware interaction and process automation.",
+      " Applied Computing often focuses on solving real-world problems using computing tools, which involves both software and hardware interaction and process automation.",
   },
 ];
-
 const stack = [
   "React",
   "Node.js",
@@ -68,7 +74,7 @@ const stack = [
 ];
 
 const experienceDescription =
-  "With a solid background in both frontend and backend development, I have worked extensively with the MERN stack, React, Angular, and Node.js, and built web applications. I used various CSS/JS libraries and frameworks and have fun creating UIs. On the backend, I have built microservices, as well as managed databases. I have a grasp of version control with Git and Agile methodologies (Scrum & Kanban) and I also worked with Docker.";
+  "With a solid background in both frontend and backend development, I have worked extensively with the MERN stack, React, Angular, and Node.js, and built web applications. I used various CSS/JS libraries and frameworks and have fun creating UI's. On the backend, I have built microservices, as well as managed databases. I have a grasp of version control with Git and Agile methodologies (Scrum & Kanban) and I also worked with Docker.";
 
 export default function App() {
   return (
@@ -88,11 +94,11 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
-          className="mt-4 text-xl text-justify font-mono w-2/3 mx-auto"
+          className="mt-4 text-xl text-justify font-mono w-2/3"
         >
           I have a{" "}
           <span className="font-sans">
-            background in applied computing, programming, and systems analysis.
+            background in applied computing, programming, and systems analysis.{" "}
           </span>{" "}
           I specialize in supporting, understanding, modeling, and optimizing
           both technical and organizational processes by combining logical
@@ -102,7 +108,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7, duration: 1 }}
-          className="mt-4 text-lg text-justify w-2/3 mx-auto"
+          className="mt-4 text-lg text-justify w-2/3"
         >
           With a background in these key areas, I have developed a comprehensive
           and technical approach to problem-solving and system design. I work
@@ -131,7 +137,11 @@ export default function App() {
               Each tool was part of a real process where I learned techniques
               and solved concrete challenges, depending on the project purpose.
             </p>
-            <div className="space-y-8 flex flex-wrap gap-2 justify-center">
+            <div className="space-y-8 flex flex-wrap gap-2">
+              <div className="w-1/5">
+                <h2 className="text-lg py-6">Projects</h2>
+                {/* <img src="./src/assets/texture.avif" className="h-4/6" /> */}
+              </div>
               {technologies.map((tech, index) => (
                 <motion.div
                   key={tech.title}
@@ -139,10 +149,10 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="p-4 md:p-8 border-l border-gray-200 text-left w-full sm:w-1/2 lg:w-1/4"
+                  className="p-4 md:p-8 border-l border-gray-200 text-left w-1/4"
                 >
                   <p>{tech.number}</p>
-                  <h3 className="text-gray-900 text-xl font-semibold mb-2">
+                  <h3 className={`text-gray-900 text-xl font-semibold mb-2`}>
                     {tech.title}
                   </h3>
                   <p className="font-medium mb-1">
@@ -168,7 +178,7 @@ export default function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Soft Skills</h2>
-            <ul className="list-disc text-lg text-left space-y-2 mx-auto max-w-3xl">
+            <ul className="list-disc text-lg text-left space-y-2">
               {soft_skills.map((skill, index) => (
                 <motion.li
                   key={index}
@@ -196,7 +206,7 @@ export default function App() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Academic Profile
             </h2>
-            <ul className="list-disc text-lg text-left space-y-2 mx-auto max-w-3xl">
+            <ul className="list-disc text-lg text-left space-y-2">
               {academic_profile.map((item, index) => (
                 <motion.li
                   key={index}
@@ -208,6 +218,42 @@ export default function App() {
                 </motion.li>
               ))}
             </ul>
+          </motion.div>
+        </div>
+      </section>
+      <section className="w-full">
+        <div className="mx-auto text-left">
+          <div>
+            {stack.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className="px-4"
+              >
+                <h3 className="text-xl py-4 border-b text-left w-1/2">
+                  {tech}
+                </h3>
+              </motion.div>
+            ))}
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row justify-between items-center"
+          >
+            <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-6">
+                Technologies & Experience
+              </h2>
+              <p className="text-lg mb-12 max-w-3xl mx-auto md:mx-0">
+                {experienceDescription}
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>

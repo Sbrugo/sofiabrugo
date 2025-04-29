@@ -5,6 +5,15 @@
   text-align: center;
   width: 100%;
 }
+body {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.6) 25%,
+      rgba(255, 255, 255, 0.8) 75%
+    ),
+    url("https://www.transparenttextures.com/patterns/diamond-sky.png"); /* Subtle pattern */
+  background-attachment: fixed;
+}
 
 .logo {
   height: 6em;
@@ -17,6 +26,12 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.bg-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 @keyframes logo-spin {
