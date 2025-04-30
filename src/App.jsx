@@ -5,19 +5,19 @@ import "./App.css";
 const technologies = [
   {
     number: "01",
-    title: "Next.js",
+    title: "Job Listing Site",
     highlight: "Tailwind CSS",
-    description: `A person I know needs something more professional than Google Forms, so she asked me to develop a Wix website. As I do not use Wix, (I should try sometime), we decided to develop a full-stack app with Next.js and integrate logic to create a clean, accessible, and fast design. The result was a platform where she can edit the view without writing any code and get in contact with people and companies.`,
+    description: `A person I know needs something more professional than Google Forms, so she asks for a Wix website. As I do not use Wix, (I should try sometime), we decided to go for a full-stack app and integrate logic in Next creating a clean, accessible, and fast design. The result was a platform where she can edit the view without writing any code and get in contact with people and companies.`,
   },
   {
     number: "02",
-    title: "React",
+    title: "Credit Platform",
     highlight: "Git, Redux",
-    description: `I worked in a team on a credit platform. First, we built the entire interface with React, and then implemented Redux for global state management. I learned a lot about teamwork and Git, PR Requests, ESLint, Jira, Scrum, Kanban, styled-components, etc.`,
+    description: `I worked on a credit platform. First, we built the entire interface with React, and then implemented Redux for global state management. I learned a lot about teamwork and Git, PR Requests, ESLint, Jira, Scrum, Kanban, styled-components, etc.`,
   },
   {
     number: "03",
-    title: "Nest.js",
+    title: "CRUD",
     highlight: "MongoDB, Validations",
     description: `During a technical interview, I built a backend with Nest.js. I focused on properly separating the logic and keeping the code clean. I applied validations, used MongoDB, and incorporated concepts from Java with Spring Boot to structure the project.`,
   },
@@ -58,13 +58,19 @@ const stack = [
   "Node.js",
   "MERN",
   "Angular",
-  "CSS/JS libraries and frameworks",
+  "Java",
+  "CSS/JS",
+  "Tailwind",
+  "Nextjs",
   "Docker",
   "MySQL",
   "Git",
-  "Agile methodologies (Scrum & Kanban)",
+  "Jira",
+  "Scrum",
+  "Kanban",
   "NestJS",
   "Yup",
+  "Redux",
 ];
 
 const experienceDescription =
@@ -72,7 +78,7 @@ const experienceDescription =
 
 export default function App() {
   return (
-    <div className="min-h-screen p-8 space-y-16 bg-slate-100 py-30">
+    <div className="min-h-screen p-8 space-y-16 py-30 bg-slate-100 text-gray-950">
       {/* Start section */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -125,13 +131,34 @@ export default function App() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Technologies I worked with lately
+              Worked on lately
             </h2>
             <p className="text-lg mb-12">
               Each tool was part of a real process where I learned techniques
               and solved concrete challenges, depending on the project purpose.
             </p>
-            <div className="space-y-8 flex flex-wrap gap-2 justify-center">
+            <div className="space-y-8 flex flex-col gap-2 justify-around">
+              <div className="p-4 md:p-8 border-l flex flex-col justify-between border-gray-300 text-left w-full">
+                <p className="text-gray-400 mb-4">00</p>
+                <div>
+                  <p className="font-bold">Technologies</p>
+                  <div className="flex flex-wrap gap-3 mb-12">
+                    {stack.map((tech, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        viewport={{ once: true }}
+                      >
+                        <p className="text-sm text-left min-w-fit border-r border-gray-400 pr-4 w-1/6">
+                          {tech}
+                        </p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </div>
               {technologies.map((tech, index) => (
                 <motion.div
                   key={tech.title}
@@ -139,9 +166,9 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="p-4 md:p-8 border-l border-gray-200 text-left w-full sm:w-1/2 lg:w-1/4"
+                  className="p-4 md:p-8 border-l border-gray-300 text-left w-full"
                 >
-                  <p>{tech.number}</p>
+                  <p className="text-gray-400 mb-4">{tech.number}</p>
                   <h3 className="text-gray-900 text-xl font-semibold mb-2">
                     {tech.title}
                   </h3>
