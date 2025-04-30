@@ -5,7 +5,7 @@
   text-align: center;
   width: 100%;
 }
-body {
+/* body {
   background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.6) 25%,
@@ -13,7 +13,7 @@ body {
     ),
     url("https://www.transparenttextures.com/patterns/batthern.png");
   background-attachment: fixed;
-}
+} */
 
 .logo {
   height: 6em;
@@ -28,11 +28,11 @@ body {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.bg-texture {
+/* .bg-texture {
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   background-repeat: repeat;
   background-size: auto;
-}
+} */
 
 @keyframes logo-spin {
   from {
