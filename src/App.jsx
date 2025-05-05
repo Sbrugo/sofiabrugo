@@ -96,13 +96,15 @@ export default function App() {
           transition={{ delay: 0.5, duration: 1 }}
           className="mt-4 text-xl text-justify font-mono w-2/3 mx-auto"
         >
-          I have a{" "}
           <span className="font-sans">
-            background in applied computing, programming, and systems analysis.
+            I have a background in applied computing, programming, and systems
+            analysis. <br /> I study Cibersecurity in Palermo University, Buenos
+            Aires and know full stack development. <br />
           </span>{" "}
-          I specialize in supporting, understanding, modeling, and optimizing
-          both technical and organizational processes by combining logical
-          thinking, digital tools, and structured methodologies.
+          <span className="font-sans font-bold">
+            I work combining logical thinking, digital tools, and structured
+            methodologies.{" "}
+          </span>
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
@@ -140,9 +142,9 @@ export default function App() {
             <div className="space-y-8 flex flex-col gap-2 justify-around">
               <div className="p-4 md:p-8 border-l flex flex-col justify-between border-gray-300 text-left w-full">
                 <p className="text-gray-400 mb-4">00</p>
-                <div>
+                <div className="flex flex-col gap-4 items-center">
                   <p className="font-bold">Technologies</p>
-                  <div className="flex flex-wrap gap-3 mb-12">
+                  <div className="flex flex-wrap gap-3 mb-12 justify-center">
                     {stack.map((tech, index) => (
                       <motion.div
                         key={index}
@@ -151,11 +153,16 @@ export default function App() {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         viewport={{ once: true }}
                       >
-                        <p className="text-sm text-left min-w-fit border-r border-gray-400 pr-4 w-1/6">
-                          {tech}
-                        </p>
+                        {/* <p className="text-sm text-left min-w-fit pr-4 w-1/6">
+                          {tech.name}
+                        </p> */}
+                        <img src={tech.url} className="max-h-[100px]" />
                       </motion.div>
                     ))}
+                    <p>
+                      Javascript Frameworks for Full Stack web development and
+                      web styling. MERN stack.
+                    </p>
                   </div>
                 </div>
               </div>
