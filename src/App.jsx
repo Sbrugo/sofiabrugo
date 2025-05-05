@@ -59,11 +59,11 @@ const stack = [
   "MERN",
   "Angular",
   "Java",
+  "CSS/JS",
   "Tailwind",
   "Nextjs",
   "Docker",
   "MySQL",
-  "MongoDB",
   "Git",
   "Jira",
   "Scrum",
@@ -78,53 +78,58 @@ const experienceDescription =
 
 export default function App() {
   return (
-    <div className="min-h-screen p-8 space-y-16 py-30 bg-gradient-to-t from-blue-950 via-pink-200 to-slate-100 text-gray-950">
+    <div className="min-h-screen p-8 space-y-16 py-30 bg-slate-100 text-gray-950">
       {/* Start section */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1 }}
         className="text-center"
       >
-        <div className="text-center space-y-6">
-          <div className="flex flex-col">
-            <span className="font-mono text-5xl md:text-7xl font-bold text-gray-950">
-              Hi,
-            </span>
-            <span className="text-lg">my name is Sofi</span>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-lg text-justify font-sans text-gray-700 leading-relaxed">
-              I have a background in applied computing, programming, and systems
-              analysis. I specialize in supporting, understanding, modeling, and
-              optimizing both technical and organizational processes by
-              combining logical thinking, digital tools, and structured
-              methodologies.
-            </p>
-            <p className="text-lg text-justify font-sans text-gray-700 leading-relaxed">
-              With a background in these key areas, I have developed a
-              comprehensive and technical approach to problem-solving and system
-              design. I work with a variety of tools and understand complex
-              systems, model processes, and structured methodologies focusing on
-              optimization.
-            </p>
-            <p className="text-lg text-justify font-sans text-gray-700 leading-relaxed">
-              I studied fashion for a semester (that was short). And right now I
-              study cybersecurity.
-            </p>
-          </div>
+        <div className="flex flex-col">
+          <span className="font-mono text-4xl md:text-7xl font-bold">Hi,</span>
+          <span className="text-md">my name is Sofi</span>
         </div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="mt-4 text-xl text-justify font-mono w-2/3 mx-auto"
+        >
+          <span className="font-sans">
+            I have a background in applied computing, programming, and systems
+            analysis. <br /> I study Cibersecurity in Palermo University, Buenos
+            Aires and know full stack development. <br />
+          </span>{" "}
+          <span className="font-sans font-bold">
+            I work combining logical thinking, digital tools, and structured
+            methodologies.{" "}
+          </span>
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7, duration: 1 }}
+          className="mt-4 text-lg text-justify w-2/3 mx-auto"
+        >
+          With a background in these key areas, I have developed a comprehensive
+          and technical approach to problem-solving and system design. I work
+          with a variety of tools and understand complex systems, model
+          processes, and structured methodologies focusing on optimization. I
+          specialize in supporting the development of solid, scalable systems by
+          prioritizing logical thinking to ensure efficiency, clarity, and
+          long-term success from the very beginning of each project.
+        </motion.p>
       </motion.div>
 
       {/* Technologies section */}
       <section className="py-20 px-6 w-full">
-        <div className="mx-auto text-center bg-gradient-to-b from-bg-slate-50 via-pink-100 to-slate-400">
+        <div className="mx-auto text-center">
           <motion.div
             key={""}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, delay: 0.5 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -135,27 +140,30 @@ export default function App() {
               and solved concrete challenges, depending on the project purpose.
             </p>
             <div className="space-y-8 flex flex-col gap-2 justify-around">
-              <div className="px-4 md:p-8 w-full flex flex-col gap-4 m-0">
-                <p className="text-gray-950">00</p>
-                <p className="font-bold">Technologies</p>
-                <div className="flex flex-wrap justify-center gap-3">
-                  {stack.map((tech, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 40 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{
-                        duration: 0.8,
-                        ease: "easeOut",
-                        delay: index * 0.2,
-                      }}
-                      viewport={{ once: true }}
-                    >
-                      <p className="text-sm text-left min-w-fit pr-4 w-1/6">
-                        {tech}
-                      </p>
-                    </motion.div>
-                  ))}
+              <div className="p-4 md:p-8 border-l flex flex-col justify-between border-gray-300 text-left w-full">
+                <p className="text-gray-400 mb-4">00</p>
+                <div className="flex flex-col gap-4 items-center">
+                  <p className="font-bold">Technologies</p>
+                  <div className="flex flex-wrap gap-3 mb-12 justify-center">
+                    {stack.map((tech, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        viewport={{ once: true }}
+                      >
+                        {/* <p className="text-sm text-left min-w-fit pr-4 w-1/6">
+                          {tech.name}
+                        </p> */}
+                        <img src={tech.url} className="max-h-[100px]" />
+                      </motion.div>
+                    ))}
+                    <p>
+                      Javascript Frameworks for Full Stack web development and
+                      web styling. MERN stack.
+                    </p>
+                  </div>
                 </div>
               </div>
               {technologies.map((tech, index) => (
@@ -163,15 +171,11 @@ export default function App() {
                   key={tech.title}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{
-                    duration: 0.8,
-                    ease: "easeOut",
-                    delay: index * 0.2,
-                  }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="p-4 md:p-8 w-full"
+                  className="p-4 md:p-8 border-l border-gray-300 text-left w-full"
                 >
-                  <p className="text-gray-950 mb-4">{tech.number}</p>
+                  <p className="text-gray-400 mb-4">{tech.number}</p>
                   <h3 className="text-gray-900 text-xl font-semibold mb-2">
                     {tech.title}
                   </h3>
@@ -190,11 +194,11 @@ export default function App() {
 
       {/* Soft Skills Section */}
       <section className="py-20 px-6 w-full">
-        <div className="text-center text-slate-100 drop-shadow-lg">
+        <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Soft Skills</h2>
@@ -216,11 +220,11 @@ export default function App() {
 
       {/* Academic Profile Section */}
       <section className="py-20 px-6 w-full">
-        <div className="text-center text-slate-100 drop-shadow-lg">
+        <div className="text-center">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
