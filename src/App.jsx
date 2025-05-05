@@ -153,7 +153,7 @@ export default function App() {
               and solved concrete challenges, depending on the project purpose.
             </p>
             <div className="space-y-8 flex flex-col gap-2 justify-around">
-              <div className="p-4 md:p-8 border-l flex flex-col justify-between border-gray-300 text-left w-full">
+              <div className="p-4 md:p-8 flex flex-col justify-between text-left w-full">
                 <p className="text-gray-400 mb-4">00</p>
                 <div className="flex flex-col gap-4 items-center">
                   <p className="font-bold">Technologies</p>
@@ -186,7 +186,7 @@ export default function App() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="p-4 md:p-8 border-l border-gray-300 text-left w-full"
+                  className="p-4 md:p-8 text-left w-full"
                 >
                   <p className="text-gray-400 mb-4">{tech.number}</p>
                   <h3 className="text-gray-900 text-xl font-semibold mb-2">
