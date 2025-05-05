@@ -5,7 +5,7 @@
   text-align: center;
   width: 100%;
 }
-body {
+/* body {
   background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.6) 25%,
@@ -13,7 +13,7 @@ body {
     ),
     url("https://www.transparenttextures.com/patterns/batthern.png");
   background-attachment: fixed;
-}
+} */
 
 .logo {
   height: 6em;
@@ -55,4 +55,26 @@ body {
 
 .read-the-docs {
   color: #888;
+}
+.sidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+  width: 10%;
+}
+.sidenav a,
+.sidenav li {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 5%;
+  display: block;
+  min-width: max-content;
 }
