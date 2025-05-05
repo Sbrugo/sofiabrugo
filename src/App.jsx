@@ -74,16 +74,16 @@ const academic_profile = [
 // ];
 
 const stack = [
-  { name: "HTML", url: "./src/assets/html.png" },
-  { name: "CSS", url: "./src/assets/css.png" },
-  { name: "Javascript", url: "./src/assets/javascript.png" },
-  { name: "React", url: "./src/assets/react.png" },
-  { name: "Next.js", url: "./src/assets/nextjs.png" },
-  { name: "NestJS", url: "./src/assets/nestjs.png" },
-  // { name: "Java", url: "./src/assets/java.png" },
-  { name: "MongoDb", url: "./src/assets/mongo.png" },
-  { name: "Git", url: "./src/assets/git.png" },
-  { name: "Jira", url: "./src/assets/jira.png" },
+  { name: "HTML", url: "/html.png" },
+  { name: "CSS", url: "/css.png" },
+  { name: "Javascript", url: "/javascript.png" },
+  { name: "React", url: "/react.png" },
+  { name: "Next.js", url: "/nextjs.png" },
+  { name: "NestJS", url: "/nestjs.png" },
+  // { name: "Java", url: "/java.png" },
+  { name: "MongoDb", url: "/mongo.png" },
+  { name: "Git", url: "/git.png" },
+  { name: "Jira", url: "/jira.png" },
 ];
 
 const experienceDescription =
