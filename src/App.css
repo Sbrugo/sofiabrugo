@@ -5,15 +5,44 @@
   text-align: center;
   width: 100%;
 }
-/* body {
-  background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.6) 25%,
-      rgba(255, 255, 255, 0.8) 75%
-    ),
-    url("https://www.transparenttextures.com/patterns/batthern.png");
-  background-attachment: fixed;
-} */
+body {
+  background-color: #707f8a;
+}
+.inria-sans-light {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.inria-sans-regular {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inria-sans-bold {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inria-sans-light-italic {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.inria-sans-regular-italic {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.inria-sans-bold-italic {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
 
 .logo {
   height: 6em;
@@ -55,4 +84,21 @@
 
 .read-the-docs {
   color: #888;
+}
+a {
+  color: inherit;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
 }
