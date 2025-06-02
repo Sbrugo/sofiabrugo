@@ -5,7 +5,7 @@ import "./App.css";
 import Articles from "./components/Articles";
 import Technologies from "./components/Technologies";
 import Start from "./components/Start";
-import Chat from "./components/Chat";
+import Books from "./components/Books";
 
 const morse_code_phrase =
   ". - - .    . - .    - - -    - - .    . - .   . -    - - -    - - -    . .    - .    - - .";
@@ -56,67 +56,71 @@ const articles = [
 ];
 export default function App() {
   return (
-    <div className="min-h-screen p-8 space-y-16 py-30 bg-slate-100 text-gray-950">
-      {/* Start section */}
-      <Start />
+    <>
+      <div className="min-h-screen p-4 space-y-16 bg-slate-100 text-gray-950">
+        {/* Start section */}
+        <Start />
 
-      {/* Technologies section */}
-      <Technologies />
-      {/* Soft Skills Section */}
-      <section className="py-20 px-6 w-full">
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Soft Skills</h2>
-            <ul className="list-disc text-lg text-left space-y-2 mx-auto max-w-3xl">
-              {soft_skills.map((skill, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: index * 0.2, duration: 1 }}
-                >
-                  {skill}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-      </section>
+        {/* Technologies section */}
+        <Technologies />
+        {/* Soft Skills Section */}
+        <section className="py-20 px-6 w-full">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Soft Skills
+              </h2>
+              <ul className="list-disc text-lg text-left space-y-2 mx-auto max-w-3xl">
+                {soft_skills.map((skill, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: index * 0.2, duration: 1 }}
+                  >
+                    {skill}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </section>
 
-      {/* Academic Profile Section */}
-      <section className="py-20 px-6 w-full">
-        <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Academic Profile
-            </h2>
-            <ul className="list-disc text-lg text-left space-y-2 mx-auto max-w-3xl">
-              {academic_profile.map((item, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: index * 0.2, duration: 1 }}
-                >
-                  <strong>{item.title}</strong>: {item.detail}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-      </section>
-      <Articles></Articles>
-      <Chat />
-    </div>
+        {/* Academic Profile Section */}
+        <section className="py-20 px-6 w-full">
+          <div className="text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Academic Profile
+              </h2>
+              <ul className="list-disc text-lg text-left space-y-2 mx-auto max-w-3xl">
+                {academic_profile.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: index * 0.2, duration: 1 }}
+                  >
+                    <strong>{item.title}</strong>: {item.detail}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </section>
+        <Articles></Articles>
+        <Books />
+      </div>
+    </>
   );
 }
