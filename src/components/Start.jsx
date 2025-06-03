@@ -16,7 +16,10 @@ const Start = () => {
       transition={{ duration: 1 }}
       className="w-full min-h-screen flex items-center justify-center px-6 py-12"
     >
-      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12">
+      <div
+        id="start"
+        className="max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12"
+      >
         <motion.div
           className="flex flex-wrap justify-center gap-4 md:justify-start md:w-1/2"
           initial={{ opacity: 0, y: 30 }}

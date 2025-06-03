@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import "../App.css";
+import Projects from "./Projects";
 
 const modalVariants = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -9,11 +10,13 @@ const modalVariants = {
   exit: { opacity: 0, scale: 0.9 },
 };
 
-const Squares = ({ props }) => {
+const Squares = ({ props, isProject }) => {
   const [selectedItem, setSelectedItem] = useState(null);
+  console.log(selectedItem);
 
   const openModal = (item) => {
     setSelectedItem(item);
+    console.log(item);
   };
 
   const closeModal = () => {
@@ -88,6 +91,7 @@ const Squares = ({ props }) => {
               </button>
               <h3 className="text-lg font-bold mb-4">{selectedItem.title}</h3>
               <p className="text-gray-700">{selectedItem.description_text}</p>
+              {/* {isProject && <Projects props={selectedItem.project} />} */}
             </motion.div>
           </motion.div>
         )}

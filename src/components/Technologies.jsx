@@ -7,7 +7,7 @@ import { technologies } from "../default_verbiage";
 import img from "../assets/image_2.png";
 const Technologies = () => {
   return (
-    <section className="py-20 px-6 w-full">
+    <section id="projects" className="py-20 px-6 w-full">
       <div className="mx-auto text-center">
         <motion.div
           key={""}
@@ -26,7 +26,7 @@ const Technologies = () => {
           <div className="space-y-8 flex flex-col gap-2 justify-around">
             <div>
               <p className="font-bold underline">Projects</p>
-              <Squares props={technologies} windowProps={<img src={img} />} />
+              <Squares props={technologies} isProject={true} />
             </div>
           </div>
         </motion.div>
