@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "../App.css";
 import imagen from "../assets/medium.jpg";
+
 const Articles = () => {
   const mediumUrl = "https://medium.com/feed/@brugosofi";
-
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
@@ -19,42 +19,64 @@ const Articles = () => {
 
   return (
     <section className="py-20 px-6 w-full">
-      <div className="mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center">
         <motion.div
-          key={""}
+          key=""
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Articles</h2>
-          <div className="space-y-8 flex flex-col gap-2 justify-around px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Articles</h2>
+
+          <div className="flex flex-col gap-8">
             {articles.map((article, index) => (
               <div
                 key={index}
-                className="p-4 md:p-8 flex flex-col justify-between text-left w-full shadow-4xl shadow bg-white rounded-2xl"
+                className="p-6 md:p-8 text-left w-full bg-white rounded-2xl shadow-md transition hover:shadow-lg"
               >
-                <div className="flex gap-3 mb-4">
-                  <img src={imagen} className="w-5 rounded-full"></img>
+                <div className="flex items-center gap-3 mb-4">
+                  <img
+                    src={imagen}
+                    alt="Author"
+                    className="w-6 h-6 rounded-full"
+                  />
                   <a
                     href="https://medium.com/@brugosofi"
-                    className="text-black"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs text-gray-700 hover:underline"
                   >
-                    <p className="text-xs">{article.author}</p>
+                    {article.author}
                   </a>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">{article.title}</h3>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Tags:
-                  {article.categories.map((category, index) => (
-                    <a href={`#${category}`} key={index}>
-                      {category}
-                      {index < article.categories.length - 1 && ", "}
-                    </a>
+
+                <h3 className="text-xl md:text-2xl font-bold mb-2">
+                  {article.title}
+                </h3>
+
+                <p className="mb-3 text-sm text-gray-600">
+                  Tags:{" "}
+                  {article.categories.map((category, i) => (
+                    <span key={i}>
+                      <a
+                        href={`#${category}`}
+                        className="hover:underline text-gray-800"
+                      >
+                        {category}
+                      </a>
+                      {i < article.categories.length - 1 && ", "}
+                    </span>
                   ))}
                 </p>
-                <a href="https://medium.com/@brugosofi/legal-problems-of-information-technologies-and-what-to-know-as-a-professional-400ed5ad4c10">
-                  Read more
+
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline font-medium text-sm"
+                >
+                  Read more →
                 </a>
               </div>
             ))}

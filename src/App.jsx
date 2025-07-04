@@ -1,4 +1,5 @@
 import React from "react";
+import Stack from "./components/Stack";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import "./App.css";
@@ -60,8 +61,7 @@ export default function App() {
       <div className="min-h-screen p-4 space-y-16 bg-slate-100 text-gray-950">
         {/* Start section */}
         <Start />
-
-        {/* Technologies section */}
+        <Stack />
         <Technologies />
         {/* Soft Skills Section */}
         <section className="py-20 px-6 w-full">

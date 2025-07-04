@@ -6,7 +6,6 @@ import image from "../assets/medium.jpg";
 import image2 from "../assets/image_2.png";
 import image3 from "../assets/image_3.png";
 import html from "../assets/html.png";
-import Stack from "./Stack";
 
 const Start = () => {
   return (
@@ -25,15 +24,7 @@ const Start = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-        >
-          {/* <img src={image} className="rounded-full w-2/5 hidden sm:block" />
-          <img src={html} className="rounded-lg h-1/10 hidden sm:block" />
-          <img
-            src={image3}
-            className="rounded-lg w-2/4 h-1/4 hidden sm:block"
-          /> */}
-          <Stack />
-        </motion.div>
+        ></motion.div>
         <div className="flex-1 text-center md:text-left space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
             Hi, I'm <span className="text-indigo-600">Sofía</span>
