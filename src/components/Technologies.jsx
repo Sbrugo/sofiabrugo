@@ -8,7 +8,7 @@ import img from "../assets/algorithm.png";
 
 const Technologies = () => {
   return (
-    <section id="projects" className="py-24 px-6 w-full bg-white">
+    <section id="projects" className="py-24 px-6 w-full">
       <div className="max-w-5xl mx-auto text-center">
         <motion.div
           key=""
@@ -17,10 +17,11 @@ const Technologies = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <h1 className="text-md sm:text-3xl md:text-4xl lg:text-5xl font-extrabold inria-sans-bold mb-6 leading-tight">
+          {/* <div className="max-w-xl sm:max-w-3xl mx-auto px-4 sm:px-6"> */}
+          <h1 className="text-sm sm:text-3xl md:text-4xl lg:text-5xl font-extrabold inria-sans-bold mb-6 leading-tight break-words">
             Projects & Technologies
           </h1>
-
+          {/* </div> */}
           <p className="text-sm sm:text-md md:text-lg text-gray-600 max-w-3xl mx-auto mb-12 px-2 sm:px-0">
             These are some of the technologies I’ve used professionally or in
             personal projects. My experience ranges from frontend to full stack
