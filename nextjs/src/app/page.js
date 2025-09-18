@@ -18,7 +18,7 @@ export default function Home() {
         >
           {language == "english" ? (
             <>
-              <ul className="text-md mb-16 flex self-start gap-6">
+              <ul className="text-md mb-16 flex self-start gap-6 text-md w-full justify-between">
                 <li>home</li>
                 <button onClick={toggleLanguage} className="p-0">
                   español

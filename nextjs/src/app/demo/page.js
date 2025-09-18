@@ -35,7 +35,7 @@ export default function Demo() {
         transition={{ duration: 1 }}
         className="w-full flex flex-col max-w-3/6"
       >
-        <ul className="text-md flex self-start gap-6">
+        <ul className="text-md flex self-start gap-6 w-full justify-between">
           <Link href="/">home</Link>
           <p className="text-md font-semibold">full stack demo</p>
         </ul>
