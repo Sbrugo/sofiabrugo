@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import "../App.css";
 import Squares from "./Squares";
-import { books } from "../default_verbiage";
+import { books } from "../../default_verbiage";
 
 const Books = () => {
   return (

@@ -1,7 +1,7 @@
 // import githubicon from "../assets/github.svg";
 // import file from "../assets/file.svg";
 // import at from "../assets/at.svg";
-import { stack } from "../default_verbiage";
+import { stack } from "../../default_verbiage";
 
 const Stack = () => {
   // const handleScrollClick = () => {
