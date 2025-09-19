@@ -19,13 +19,15 @@ export default function Home() {
           {language == "english" ? (
             <>
               <ul className="text-md mb-16 flex self-start gap-6 text-md w-full justify-between">
-                <li>home</li>
-                <button onClick={toggleLanguage} className="p-0">
+                <div className="flex gap-6">
+                  <li>home</li>
+                  <Link href="/demo" className="font-semibold">
+                    see demo
+                  </Link>
+                </div>
+                <button onClick={toggleLanguage} className="p-0 font-normal">
                   español
                 </button>
-                <Link href="/demo" className="font-semibold">
-                  see demo
-                </Link>
               </ul>
               <h4 className="text-2xl font-bold self-start mb-8 tracking-tight leading-10">
                 My Portfolio
@@ -56,14 +58,16 @@ export default function Home() {
             </>
           ) : (
             <>
-              <ul className="text-md mb-16 flex self-start gap-6">
-                <li>inicio</li>
+              <ul className="text-md mb-16 flex gap-6 justify-between">
+                <div className="flex gap-6">
+                  <li>inicio</li>
+                  <Link href="/demo" className="font-semibold">
+                    ver demo
+                  </Link>
+                </div>
                 <button onClick={toggleLanguage} className="p-0">
                   english
                 </button>
-                <Link href="/demo" className="font-semibold">
-                  ver demo
-                </Link>
               </ul>
               <h4 className="text-2xl font-bold self-start mb-8 tracking-tight leading-10">
                 Mi Portafolio
