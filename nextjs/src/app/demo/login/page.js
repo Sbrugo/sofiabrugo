@@ -1,16 +1,16 @@
 "use client";
 /* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import React, { useState, useContext } from "react";
-import { useRouter } from "next/navigation";
+import React, { useContext, useState } from "react";
 import Link from "next/link";
-import { useLang } from "../context/LanguageContext";
-import { AuthContext } from "../context/AuthContext";
+import { useLang } from "../../context/LanguageContext";
+import { AuthContext } from "app/app/context/AuthContext";
+import { useRouter } from "next/navigation";
 
-export default function Demo() {
+const Login = () => {
   const router = useRouter();
   const { language } = useLang();
-  const { register, loading, error, user } = useContext(AuthContext);
+  const { login, loading, error, user } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
     email: "",
@@ -27,7 +27,7 @@ export default function Demo() {
     event.preventDefault();
     const { email, password } = formData;
 
-    await register(email, password);
+    await login(email, password);
 
     if (!error && email && password) {
       router.push("/demo/home");
@@ -43,67 +43,78 @@ export default function Demo() {
         home
       </Link>
 
-      <div className="flex items-center justify-center flex-1 px-4 sm:px-6">
+      <div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="flex items-center justify-center flex-1 px-4 sm:px-6"
+      >
         <div className="w-full max-w-md space-y-6">
           {language === "spanish" ? (
             <>
               <div className="space-y-2 text-center sm:text-left">
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tight leading-10">
-                  Registrarse
+                  Iniciar sesión
                 </h2>
                 <p className="text-gray-400 sm:text-gray-500 dark:text-neutral-200">
-                  Ingresa tus datos a continuación para crear una cuenta
+                  Ingresa tu correo electrónico a continuación para iniciar
+                  sesión en tu cuenta
                 </p>
               </div>
 
               <div className="space-y-4">
-                <label htmlFor="email" className="block text-sm sm:text-base">
-                  Correo electrónico
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  placeholder="ejemplo@dominio.com"
-                  required
-                  type="email"
-                  className="w-full p-2 sm:p-3 rounded bg-neutral-800 text-white"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
+                <div className="space-y-2">
+                  <label htmlFor="email" className="block text-sm sm:text-base">
+                    Correo electrónico
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    placeholder="ejemplo@dominio.com"
+                    required
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full p-2 sm:p-3 rounded bg-neutral-800 text-white"
+                  />
+                </div>
               </div>
 
               <div className="space-y-2">
-                <label
-                  htmlFor="password"
-                  className="block text-sm sm:text-base"
-                >
-                  Contraseña
-                </label>
+                <div className="flex items-center justify-between">
+                  <label
+                    htmlFor="password"
+                    className="block text-sm sm:text-base"
+                  >
+                    Contraseña
+                  </label>
+                  <a className="text-sm underline" href="#">
+                    ¿Olvidaste tu contraseña?
+                  </a>
+                </div>
                 <input
                   id="password"
                   name="password"
                   required
                   type="password"
                   placeholder="Ingresa tu contraseña"
-                  className="w-full p-2 sm:p-3 rounded bg-neutral-800 text-white"
                   value={formData.password}
                   onChange={handleChange}
+                  className="w-full p-2 sm:p-3 rounded bg-neutral-800 text-white"
                 />
-
                 <div className="flex justify-center">
                   <button
                     className="w-full sm:w-auto py-2 px-4 mt-4 bg-neutral-100 text-gray-900 rounded font-semibold transition hover:bg-neutral-200"
                     type="submit"
                     onClick={handleSubmit}
                   >
-                    Regístrate
+                    Iniciar sesión
                   </button>
                 </div>
-
                 <div className="mt-4 text-center text-sm sm:text-base font-bold">
-                  ¿Ya tienes una cuenta?{" "}
-                  <Link className="underline" href="/demo/login">
-                    Iniciar sesión
+                  ¿No tienes una cuenta?{" "}
+                  <Link className="underline" href={"/demo/"}>
+                    Regístrate
                   </Link>
                 </div>
               </div>
@@ -120,39 +131,42 @@ export default function Demo() {
               </div>
 
               <div className="space-y-4">
-                <label htmlFor="email" className="block text-sm sm:text-base">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  placeholder="example@domain.com"
-                  required
-                  type="email"
-                  className="w-full p-2 sm:p-3 rounded bg-neutral-800 text-white"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
+                <div className="space-y-2">
+                  <label htmlFor="email" className="block text-sm sm:text-base">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    placeholder="example@domain.com"
+                    required
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full p-2 sm:p-3 rounded bg-neutral-800 text-white"
+                  />
+                </div>
               </div>
 
               <div className="space-y-2">
-                <label
-                  htmlFor="password"
-                  className="block text-sm sm:text-base"
-                >
-                  Password
-                </label>
+                <div className="flex items-center justify-between">
+                  <label
+                    htmlFor="password"
+                    className="block text-sm sm:text-base"
+                  >
+                    Password
+                  </label>
+                </div>
                 <input
                   id="password"
                   name="password"
                   required
                   type="password"
                   placeholder="Enter your password"
-                  className="w-full p-2 sm:p-3 rounded bg-neutral-800 text-white"
                   value={formData.password}
                   onChange={handleChange}
+                  className="w-full p-2 sm:p-3 rounded bg-neutral-800 text-white"
                 />
-
                 <div className="flex justify-center">
                   <button
                     className="w-full sm:w-auto py-2 px-4 mt-4 bg-neutral-100 text-gray-900 rounded font-semibold transition hover:bg-neutral-200"
@@ -162,7 +176,6 @@ export default function Demo() {
                     {loading ? "Loading..." : isLogin ? "Sign in" : "Register"}
                   </button>
                 </div>
-
                 <div className="mt-4 text-center text-sm sm:text-base font-bold">
                   Already have an account?{" "}
                   <button
@@ -180,4 +193,6 @@ export default function Demo() {
       </div>
     </div>
   );
-}
+};
+
+export default Login;

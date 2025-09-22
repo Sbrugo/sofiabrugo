@@ -28,7 +28,7 @@ body {
 button {
   border-radius: 8px;
   font-size: 1em;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
