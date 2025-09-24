@@ -20,7 +20,6 @@ export default function Home() {
             <ul className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 w-full text-md">
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <li>home</li>
-                <Link href="/demo">see demo</Link>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <Link href="/files/Developer.pdf" download>
@@ -48,13 +47,23 @@ export default function Home() {
 
               <ul className="flex flex-col gap-4 sm:gap-6 text-base sm:text-lg">
                 <li>
-                  <span className="text-neutral-500">2025 Freelance</span>{" "}
-                  Hogarth | Website production and localization
+                  <span className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
+                    2025
+                  </span>{" "}
+                  Freelance: Website production and localization
                 </li>
                 <li>
-                  <span className="text-neutral-500">2024 Contractor</span>{" "}
-                  Kopius | Integration Project for U.S. Financial Agents
+                  <span className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
+                    2024
+                  </span>{" "}
+                  Contractor: Integration Project for U.S. Financial Agents
                 </li>
+                <Link href={"/demo"}>
+                  <span className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
+                    DEMO
+                  </span>{" "}
+                  Watch: Full Stack ecommerce (Next + Nest)
+                </Link>
               </ul>
             </div>
           </>
@@ -63,7 +72,6 @@ export default function Home() {
             <ul className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 w-full text-md">
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <li>inicio</li>
-                {/* <Link href="/demo">ver demo</Link> */}
               </div>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <Link
@@ -97,19 +105,20 @@ export default function Home() {
                   <span className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
                     2025
                   </span>{" "}
-                  Freelance: Website production and localization
+                  Freelance: Producción y Localización de sitios web
                 </li>
                 <li>
                   <span className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
                     2024
                   </span>{" "}
-                  Contractor: Integration Project for U.S. Financial Agents
+                  Contractor: Proyecto de Integración para Agentes Financieros
+                  Estadounidenses
                 </li>
                 <Link href={"/demo"}>
                   <span className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
                     DEMO
                   </span>{" "}
-                  Watch: Full Stack ecommerce (Next + Nest)
+                  Ver: Full Stack ecommerce (Next + Nest)
                 </Link>
               </ul>
             </div>
