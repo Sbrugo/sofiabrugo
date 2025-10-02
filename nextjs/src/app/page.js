@@ -17,18 +17,14 @@ export default function Home() {
       >
         {language === "english" ? (
           <>
-            <ul className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 w-full text-md">
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <ul className="flex justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 w-full text-md">
                 <li>home</li>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <Link href="/files/Developer.pdf" download>
                   resume
                 </Link>
                 <button onClick={toggleLanguage} className="p-0 font-thin">
                   español
                 </button>
-              </div>
             </ul>
 
             <h4 className="text-2xl sm:text-3xl font-bold mb-6 tracking-tight leading-snug">
@@ -69,11 +65,8 @@ export default function Home() {
           </>
         ) : (
           <>
-            <ul className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 w-full text-md">
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <ul className="flex justify-between items-start sm:items-center gap-4 sm:gap-6 mb-8 w-full text-md">
                 <li>inicio</li>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <Link
                   href="/files/Programmer.pdf"
                   download
@@ -84,7 +77,6 @@ export default function Home() {
                 <button onClick={toggleLanguage} className="p-0 font-thin">
                   english
                 </button>
-              </div>
             </ul>
 
             <h4 className="text-2xl sm:text-3xl font-bold mb-6 tracking-tight leading-snug">
