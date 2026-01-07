@@ -26,8 +26,8 @@ export default function Home() {
           <Link
             href={
               language === "english"
-                ? "/files/Developer.pdf"
-                : "/files/Programmer.pdf"
+                ? "/files/Sofia_Brugo_Spinetto_CV_Backend_EN.pdf"
+                : "/files/Sofia_Brugo_Spinetto_CV_Backend.pdf"
             }
             download
             className="font-thin"
