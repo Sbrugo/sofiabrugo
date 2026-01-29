@@ -17,10 +17,8 @@ export default function Home() {
       >
         {/* NAV */}
         <ul className="flex flex-wrap justify-between sm:justify-end gap-4 mb-10 text-sm text-gray-400">
-          <li>{language === "english" ? "home" : "inicio"}</li>
-
-          <button onClick={toggleLanguage} className="font-thin">
-            {language === "english" ? "change language" : "cambiar idioma"}
+          <button onClick={toggleLanguage} className="font-thin px-3">
+            {language === "english" ? "Change language" : "Cambiar de idioma"}
           </button>
 
           <Link
@@ -30,16 +28,18 @@ export default function Home() {
                 : "/files/Sofia_Brugo_Spinetto_CV_Backend.pdf"
             }
             download
-            className="font-thin"
+            className="font-thin px-3"
           >
-            {language === "english" ? "resume" : "CV"}
+            {language === "english"
+              ? "Download resume"
+              : "Descargar currículum"}
           </Link>
 
           <Link
             href="https://www.linkedin.com/in/sofiabrugo/"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-thin"
+            className="font-thin px-3"
           >
             LinkedIn
           </Link>
@@ -48,7 +48,7 @@ export default function Home() {
             href="https://github.com/Sbrugo"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-thin"
+            className="font-thin px-3"
           >
             Github
           </Link>
@@ -102,16 +102,16 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open Featured Project: API Backend on NestJS"
-                className="block border border-gray-700 rounded-xl p-6 sm:p-6 bg-neutral-900/40 hover:border-gray-500 transition"
+                className="block border border-gray-700 rounded-xl p-6 sm:p-6 bg-gray-300 hover:border-gray-500 transition"
               >
-                <p className="text-sm uppercase tracking-wide text-gray-400">
+                <p className="text-sm uppercase tracking-wide text-gray-600">
                   Featured Project
                 </p>
-                <h5 className="text-lg font-semibold mt-1 flex items-center gap-2">
+                <h5 className="text-lg font-semibold mt-1 flex items-center gap-2 text-gray-950">
                   Backend API — NestJS{" "}
                   <span className="text-gray-500 text-sm">↗</span>
                 </h5>
-                <p className="text-sm text-gray-500 mt-1 max-w-prose">
+                <p className="text-sm text-gray-600 mt-1 max-w-prose">
                   Modular REST API focused on clean architecture, validation,
                   and service separation.
                 </p>
@@ -204,16 +204,16 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ver proyecto destacado: API Backend en NestJS"
-                className="block border border-gray-700 rounded-xl p-6 hover:border-gray-500 transition"
+                className="block border border-gray-700 rounded-xl p-6 sm:p-6 bg-gray-300 hover:border-gray-500 transition"
               >
-                <p className="text-sm uppercase tracking-wide text-gray-400">
+                <p className="text-sm uppercase tracking-wide text-gray-600">
                   Proyecto destacado
                 </p>
-                <h5 className="text-lg font-semibold mt-1">
+                <h5 className="text-lg font-semibold mt-1 text-gray-950">
                   API Backend — NestJS{" "}
                   <span className="text-gray-500 text-sm">↗</span>
                 </h5>
-                <p className="text-sm text-gray-400 mt-2 max-w-prose">
+                <p className="text-sm text-gray-600 mt-2 max-w-prose">
                   API REST modular enfocada en arquitectura limpia, validaciones
                   y separación de servicios.
                 </p>
