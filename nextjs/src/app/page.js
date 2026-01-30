@@ -3,12 +3,18 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useLang } from "./context/LanguageContext";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   const { language, toggleLanguage } = useLang();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-6 py-12 sm:px-6 md:px-12 bg-black text-white">
+    <div className="min-h-screen flex flex-col items-center px-6 py-12 sm:px-6 md:px-12 bg-gray-950 text-white">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -16,50 +22,65 @@ export default function Home() {
         className="w-full max-w-3xl tracking-wider"
       >
         {/* NAV */}
-        <ul className="flex flex-wrap justify-between sm:justify-end gap-4 mb-10 text-sm text-gray-400">
-          <button onClick={toggleLanguage} className="font-thin px-3">
-            {language === "english" ? "Change language" : "Cambiar de idioma"}
-          </button>
-
-          <Link
-            href={
-              language === "english"
-                ? "/files/Sofia_Brugo_Spinetto_CV_Backend_EN.pdf"
-                : "/files/Sofia_Brugo_Spinetto_CV_Backend.pdf"
-            }
-            download
-            className="font-thin px-3"
+        <nav className="flex">
+          <div className="sm:hidden flex justify-end w-fit">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 sm:hidden flex jutify-end"
+            >
+              <FontAwesomeIcon
+                icon={faBars}
+                className="h-6 w-6 text-gray-400"
+              />
+            </button>
+          </div>
+          <ul
+            className={`flex-col sm:flex-row sm:flex flex-wrap justify-between sm:justify-end gap-4 mb-10 text-sm text-gray-400 ${isMenuOpen ? "flex" : "hidden"}`}
           >
-            {language === "english"
-              ? "Download resume"
-              : "Descargar currículum"}
-          </Link>
+            <button onClick={toggleLanguage} className="font-thin px-3 pl-0">
+              EN / ES
+            </button>
 
-          <Link
-            href="https://www.linkedin.com/in/sofiabrugo/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-thin px-3"
-          >
-            LinkedIn
-          </Link>
+            <Link
+              href={
+                language === "english"
+                  ? "/files/Sofia_Brugo_Spinetto_CV_Backend_EN.pdf"
+                  : "/files/Sofia_Brugo_Spinetto_CV_Backend.pdf"
+              }
+              download
+              className="font-thin px-3 flex justify-center"
+            >
+              {language === "english"
+                ? "Download resume"
+                : "Descargar currículum"}
+            </Link>
 
-          <Link
-            href="https://github.com/Sbrugo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-thin px-3"
-          >
-            Github
-          </Link>
-        </ul>
+            <Link
+              href="https://www.linkedin.com/in/sofiabrugo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-thin px-3 flex justify-center"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} className="font-lg" />
+            </Link>
+
+            <Link
+              href="https://github.com/Sbrugo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-thin px-3 flex justify-center"
+            >
+              <FontAwesomeIcon icon={faGithub} className="font-lg" />
+            </Link>
+          </ul>
+        </nav>
 
         {language === "english" ? (
           <div className="space-y-14">
             {/* INTRO */}
             <section className="space-y-6">
               <h4 className="mt-6 sm:mt-0 text-gray-300 text-2xl sm:text-3xl font-bold tracking-tight leading-relaxed">
-                Backend Developer · APIs & Distributed Systems
+                Sofía Brugo · Backend Developer
               </h4>
 
               <p className="text-base sm:text-lg text-gray-300 max-w-prose md:max-w-fit leading-relaxed font-medium">
@@ -158,9 +179,11 @@ export default function Home() {
             {/* INTRO ES */}
             <section className="space-y-6">
               <h4 className="mt-6 sm:mt-0 text-gray-300 text-2xl sm:text-3xl font-bold tracking-tight leading-relaxed">
-                Desarrolladora Backend · APIs y Sistemas Distribuidos
+                Sofía Brugo · Desarrollo Backend
               </h4>
-
+              <p className="text-base sm:text-lg text-gray-400 max-w-prose md:max-w-fit leading-relaxed font-medium">
+                APIs y Sistemas Distribuidos
+              </p>
               <p className="text-base sm:text-lg text-gray-300 max-w-prose md:max-w-fit leading-relaxed font-medium">
                 Desarrollo de APIs REST y servicios backend con Java y NestJS,
                 con experiencia práctica integrando SPAs basadas en React.
