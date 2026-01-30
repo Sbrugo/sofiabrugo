@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
   const { language, toggleLanguage } = useLang();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +35,7 @@ export default function Home() {
             </button>
           </div>
           <ul
-            className={`flex-col sm:flex-row sm:flex flex-wrap justify-between sm:justify-end gap-4 mb-10 text-sm text-gray-400 ${isMenuOpen ? "flex" : "hidden"}`}
+            className={`flex-col sm:flex-row sm:flex flex-wrap justify-between sm:justify-end gap-4 md:mb-10 md:text-sm text-gray-400 ${isMenuOpen ? "flex" : "hidden"} items-center`}
           >
             <button onClick={toggleLanguage} className="font-thin px-3 pl-0">
               EN / ES
@@ -61,7 +61,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="font-thin px-3 flex justify-center"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} className="font-lg" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="text-lg" />
             </Link>
 
             <Link
@@ -70,7 +70,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="font-thin px-3 flex justify-center"
             >
-              <FontAwesomeIcon icon={faGithub} className="font-lg" />
+              <FontAwesomeIcon icon={faGithub} className="text-lg" />
             </Link>
           </ul>
         </nav>
@@ -79,16 +79,18 @@ export default function Home() {
           <div className="space-y-14">
             {/* INTRO */}
             <section className="space-y-6">
-              <h4 className="mt-6 sm:mt-0 text-gray-300 text-2xl sm:text-3xl font-bold tracking-tight leading-relaxed">
+              <h4 className="mt-6 sm:mt-0 text-gray-300 text-2xl sm:text-5xl font-medium tracking-tight md:tracking-normal leading-relaxed">
                 Sofía Brugo · Backend Developer
               </h4>
-
-              <p className="text-base sm:text-lg text-gray-300 max-w-prose md:max-w-fit leading-relaxed font-medium">
+              <p className="text-lg sm:text-lg text-gray-400 max-w-prose md:max-w-fit leading-relaxed italic">
+                APIs & Distributed Systems
+              </p>
+              <p className="text-base sm:text-lg text-gray-300 max-w-prose md:max-w-fit leading-relaxed font-bold underline underline-offset-4">
                 Building REST APIs and backend services with Java and NestJS,
                 with practical experience integrating React-based SPAs.
               </p>
 
-              <p className="text-base sm:text-lg text-gray-400 max-w-prose md:max-w-fit leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-500 max-w-prose md:max-w-fit leading-relaxed">
                 Backend-focused developer with experience designing and
                 implementing REST APIs, modular services, and data-driven
                 applications. I focus on clear separation of responsibilities,
@@ -100,6 +102,9 @@ export default function Home() {
 
             {/* EXPERIENCE */}
             <section className="space-y-4">
+              <p className="text-sm uppercase tracking-wide text-gray-400">
+                Experience
+              </p>
               <ul className="flex flex-col gap-3 text-gray-300">
                 <li>
                   <span className="tabular-nums text-gray-400">
@@ -123,16 +128,20 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open Featured Project: API Backend on NestJS"
-                className="block border border-gray-700 rounded-xl p-6 sm:p-6 bg-gray-300 hover:border-gray-500 transition"
+                className="group block border border-gray-700 rounded-xl p-6 sm:p-6 hover:border-gray-500 hover:shadow-lg transition"
+                style={{ backgroundColor: "#D3D3D322" }}
               >
-                <p className="text-sm uppercase tracking-wide text-gray-600">
+                <p className="text-sm uppercase tracking-wide text-gray-400 group-hover:text-shadow-lg">
                   Featured Project
                 </p>
-                <h5 className="text-lg font-semibold mt-1 flex items-center gap-2 text-gray-950">
+                <h5 className="text-lg font-semibold mt-1 flex items-center gap-2 text-gray-100 group-hover:text-shadow-lg">
+                  <FontAwesomeIcon
+                    icon={faLink}
+                    className="text-lg text-blue-300"
+                  />{" "}
                   Backend API — NestJS{" "}
-                  <span className="text-gray-500 text-sm">↗</span>
                 </h5>
-                <p className="text-sm text-gray-600 mt-1 max-w-prose">
+                <p className="text-sm text-gray-400 mt-1 group-hover:text-shadow-lg">
                   Modular REST API focused on clean architecture, validation,
                   and service separation.
                 </p>
@@ -153,7 +162,7 @@ export default function Home() {
                 className="block hover:underline text-gray-300"
               >
                 Full Stack REST Application (Java + React)
-                <p className="text-sm text-gray-400 mt-1 max-w-prose">
+                <p className="text-sm text-gray-400 mt-1">
                   End-to-end application demonstrating API consumption, data
                   validation and frontend-backend integration.
                 </p>
@@ -167,7 +176,7 @@ export default function Home() {
                 className="block hover:underline text-gray-300"
               >
                 Design Patterns — Java
-                <p className="text-sm text-gray-400 mt-1 max-w-prose">
+                <p className="text-sm text-gray-400 mt-1">
                   Object-oriented design patterns with focus on responsibilities
                   and maintainability.
                 </p>
@@ -178,18 +187,18 @@ export default function Home() {
           <div className="space-y-14">
             {/* INTRO ES */}
             <section className="space-y-6">
-              <h4 className="mt-6 sm:mt-0 text-gray-300 text-2xl sm:text-3xl font-bold tracking-tight leading-relaxed">
+              <h4 className="mt-6 sm:mt-0 text-gray-300 text-2xl sm:text-5xl font-bold tracking-tight md:tracking-normal leading-relaxed">
                 Sofía Brugo · Desarrollo Backend
               </h4>
-              <p className="text-base sm:text-lg text-gray-400 max-w-prose md:max-w-fit leading-relaxed font-medium">
+              <p className="text-lg sm:text-lg text-gray-400 max-w-prose md:max-w-fit leading-relaxed italic">
                 APIs y Sistemas Distribuidos
               </p>
-              <p className="text-base sm:text-lg text-gray-300 max-w-prose md:max-w-fit leading-relaxed font-medium">
+              <p className="text-base sm:text-lg text-gray-300 max-w-prose md:max-w-fit leading-relaxed font-medium underline underline-offset-4">
                 Desarrollo de APIs REST y servicios backend con Java y NestJS,
                 con experiencia práctica integrando SPAs basadas en React.
               </p>
 
-              <p className="text-base sm:text-lg text-gray-400 max-w-prose md:max-w-fit leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-500 max-w-prose md:max-w-fit leading-relaxed">
                 Desarrolladora con foco en backend, con experiencia en el diseño
                 e implementación de APIs REST, servicios modulares y
                 aplicaciones orientadas a datos. Me enfoco en la separación
@@ -203,6 +212,9 @@ export default function Home() {
 
             {/* EXPERIENCE ES */}
             <section className="space-y-4">
+              <p className="text-sm uppercase tracking-wide text-gray-400">
+                Experiencia
+              </p>
               <ul className="flex flex-col gap-3 text-gray-300">
                 <li>
                   <span className="tabular-nums text-gray-400">
@@ -227,16 +239,22 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Ver proyecto destacado: API Backend en NestJS"
-                className="block border border-gray-700 rounded-xl p-6 sm:p-6 bg-gray-300 hover:border-gray-500 transition"
+                className="group block border rounded-xl p-6 sm:p-6 border-gray-700 hover:border-gray-500 transition"
+                style={{ backgroundColor: "#D3D3D322" }}
               >
-                <p className="text-sm uppercase tracking-wide text-gray-600">
+                <p className="text-sm uppercase tracking-wide text-gray-400 transition group-hover:text-shadow-lg">
                   Proyecto destacado
                 </p>
-                <h5 className="text-lg font-semibold mt-1 text-gray-950">
+
+                <h5 className="text-lg font-semibold mt-1 text-gray-200 transition">
+                  <FontAwesomeIcon
+                    icon={faLink}
+                    className="text-lg text-blue-300 group-hover:text-shadow-lg"
+                  />{" "}
                   API Backend — NestJS{" "}
-                  <span className="text-gray-500 text-sm">↗</span>
                 </h5>
-                <p className="text-sm text-gray-600 mt-2 max-w-prose">
+
+                <p className="text-sm text-gray-400 mt-2 max-w-prose transition group-hover:text-shadow-lg">
                   API REST modular enfocada en arquitectura limpia, validaciones
                   y separación de servicios.
                 </p>
@@ -257,7 +275,7 @@ export default function Home() {
                 className="block hover:underline text-gray-300"
               >
                 Aplicación Full Stack REST (Java + React)
-                <p className="text-sm text-gray-500 mt-1 max-w-prose">
+                <p className="text-sm text-gray-300 mt-1">
                   Aplicación end-to-end que demuestra consumo de APIs,
                   validación de datos e integración frontend-backend.
                 </p>
@@ -271,7 +289,7 @@ export default function Home() {
                 className="block hover:underline text-gray-300"
               >
                 Patrones de Diseño — Java
-                <p className="text-sm text-gray-400 mt-1 max-w-prose">
+                <p className="text-sm text-gray-400 mt-1">
                   Implementación de patrones de diseño orientados a objetos con
                   foco en responsabilidades y mantenibilidad.
                 </p>
